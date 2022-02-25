@@ -26,3 +26,12 @@ form input {
 }
 
 /* solution styles */
+.valid input {
+  border-color: #0a0;
+} 
+.valid input:focus {
+  border-color: #0a0;
+} 
+.valid span{
+  color: #0a0;
+}

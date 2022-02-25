@@ -1,14 +1,13 @@
-const emailField = document.getElementById('email')
-const validEmailPattern = new RegExp('([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?')
+const emailField = document.querySelector('#email')
+const validEmailPattern = new RegExp('([A-Za-z\\d\\.-]+)@([A-Za-z\\d-]+)\\.([A-Za-z]{2,8})(\\.[A-Za-z]{2,8})?')
+const validEmailPattern2 = /^([A-Za-z\d\.-]+)@([A-Za-z\d-]+)\.([A-Za-z]{2,8})(\.[A-Za-z]{2,8})?$/
 
 emailField.addEventListener('input', (e) => validate(e.target, validEmailPattern))
 
 function validate(field, pattern) {
-    console.log(field.value)
-    
     if (pattern.test(field.value)) {
-        field.parentNode.className = 'valid'
+        field.parentElement.classList.add('valid')
     } else {
-        field.parentNode.className = ''
+        field.parentElement.classList.remove('valid')
     }
 }

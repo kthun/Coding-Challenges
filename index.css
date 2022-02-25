@@ -26,12 +26,17 @@ form input {
 }
 
 /* solution styles */
-.valid input {
-  border-color: #0a0;
-} 
-.valid input:focus {
-  border-color: #0a0;
-} 
-.valid span{
-  color: #0a0;
+.tick {
+  color: #07cc81;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all ease-in 0.2s;
 }
+.valid .tick {
+  opacity: 1;
+  transform: translateY(0px);
+}
+form .valid input {
+  border-color: #07cc81;
+  outline-color: #07cc81;
+} 
